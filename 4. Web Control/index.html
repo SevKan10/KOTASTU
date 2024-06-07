@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Deivce</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>KOTASTU</h1>
+    </header>
+
+    <h1 class="control">
+        Control Device
+    </h1>
+
+    <div class='button'>
+        <table>
+            <tr>
+                <td><a onClick='toggleDeviceState(1)'><button class='on' id="device1">Turn On 1</button></a>
+                <td><a onClick='toggleDeviceState(2)'><button class='on' id="device2">Turn On 2</button></a>
+            </tr>
+            <tr>
+                <td><a onClick='toggleDeviceState(3)'><button class='on' id="device3">Turn On 3</button></a>
+                <td><a onClick='toggleDeviceState(4)'><button class='on' id="device4">Turn On 4</button></a>
+            </tr>
+            <tr>
+                <td><a onClick='toggleDeviceState(5)'><button class='on' id="device5">Turn On 5</button></a>
+                <td><a onClick='toggleDeviceState(6)'><button class='on' id="device6">Turn On 6</button></a>
+            </tr>
+            <tr>
+                <td><a onClick='toggleDeviceState(7)'><button class='on' id="device7">Turn On 7</button></a>
+                <td><a onClick='toggleDeviceState(8)'><button class='on' id="device8">Turn On 8</button></a>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <form>
+        <input id="numberPhone" class='bang' type="phone" inputmode="numeric" placeholder="Số điện thoại" />
+        <input id="hourOn" class='timer'  type="number" min="0" max="23" placeholder="Hour on" /> 
+        <input id="minuteOn" class='timer2' type="number" min="0" max="59" placeholder="Minute on" />
+        <input id="hourOff" class='timer4' type="number" min="0" max="23" placeholder="Hour off"/>
+        <input id="minuteOff" class='timer3' type="number" min="0" max="59" placeholder="Minute off" />
+        <input id="selectDevice" class='deviceselect' type="number" min="1" max="8" placeholder="Device" />
+    </form> 
+    <button onclick="callNumberPhone()" class='push'>CALL</button>
+    <button onclick="setTimer()" class='pushtime'>RUN</button>
+    <button onclick="stopDevice()" class='stoptime'>CLEAR</button>
+</body>
+
+</html>
