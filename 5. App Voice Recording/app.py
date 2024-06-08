@@ -138,3 +138,10 @@ mode = tk.StringVar(value="text")
 keyboard.add_hotkey('ctrl+shift+l', start_listening)
 keyboard.add_hotkey('ctrl+shift+i', listen_and_control)
 root.mainloop()
+
+
+
+
+
+
+# Code by SevKan
