@@ -1,23 +1,23 @@
-async function changeStatus() // Lấy dữ liệu từ Blynk
-{
-    var getDataUrl = "https://sgp1.blynk.cloud/external/api/get?token=s4IEZXPS6DFlYAACZC_6z-rNmdU1erLH&v1";
+// async function changeStatus() // Lấy dữ liệu từ Blynk
+// {
+//     var getDataUrl = "https://sgp1.blynk.cloud/external/api/get?token=s4IEZXPS6DFlYAACZC_6z-rNmdU1erLH&v1";
     
-    try 
-    {
-        let getResponse = await fetch(getDataUrl);
-        if (getResponse.ok) 
-        {
-            let data = await getResponse.text(); 
-            console.log("Data received: " + data);
-            updateButtonStates(data.split(','));
-        } else {
-            console.error("Get error: " + getResponse.status);
-        }
-    } catch (error) 
-    {
-        console.error("Get fetch error: " + error);
-    }   
-}
+//     try 
+//     {
+//         let getResponse = await fetch(getDataUrl);
+//         if (getResponse.ok) 
+//         {
+//             let data = await getResponse.text(); 
+//             console.log("Data received: " + data);
+//             updateButtonStates(data.split(','));
+//         } else {
+//             console.error("Get error: " + getResponse.status);
+//         }
+//     } catch (error) 
+//     {
+//         console.error("Get fetch error: " + error);
+//     }   
+// }
 
 function toggleDeviceState(device)
 { 
@@ -121,6 +121,8 @@ function setTimer()
     xhr.open("GET", url, true);
     xhr.send();
     console.log("Send timer"); 
+    alert("Sent timer");
+
 }
 
 function stopDevice() 
@@ -133,4 +135,6 @@ function stopDevice()
     xhr.open("GET", url, true);
     xhr.send();
     console.log("Send stop"); 
+    alert("Cleared timer");
 }
+//Code by SevKan
