@@ -276,7 +276,7 @@ status_label.pack(pady=10)
 tk.Button(root, text="Lưu tên và số điện thoại", command=savePhoneNumber, bg='#018ABE', fg='#D6E8EE', font=('Helvetica', 12, 'bold')).pack(pady=10)
 tk.Button(root, text="Gọi", command=callPhoneNumber, bg='#018ABE', fg='#D6E8EE', font=('Helvetica', 12, 'bold')).pack(pady=10)
 
-phone_listbox = tk.Listbox(root, width=60, height=10, font=('Helvetica', 12))
+phone_listbox = tk.Listbox(root, width=40, height=10, font=('Helvetica', 12))
 phone_listbox.pack(pady=10)
 phone_listbox.bind("<Double-1>", onDoubleClick)
 
